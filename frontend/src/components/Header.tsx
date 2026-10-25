@@ -69,19 +69,19 @@ export const Header: React.FC = () => {
                 className="w-full h-full object-contain"
               />
             </div>
-            <div>
-              <div className="flex items-center space-x-2">
-                <span className="font-extrabold text-slate-900 tracking-tight text-base flex items-center">
+            <div className="min-w-0">
+              <div className="flex items-center space-x-2 flex-wrap sm:flex-nowrap">
+                <span className="font-extrabold text-slate-900 tracking-tight text-sm lg:text-base flex items-center whitespace-nowrap">
                   <span className="text-[#0B2545]">Sync</span>
                   <span className="text-[#C19A5B]">Desk</span>
-                  <span className="mx-2 text-slate-300 font-normal">|</span>
-                  <span className="text-slate-800 font-bold">AICTE Complaint Monitoring & Coordination</span>
+                  <span className="mx-1.5 text-slate-300 font-normal">|</span>
+                  <span className="text-slate-800 font-bold">Complaint Monitoring & Coordination</span>
                 </span>
-                <span className="bg-amber-100 text-amber-800 text-[10px] font-semibold px-2 py-0.5 rounded border border-amber-300">
+                <span className="hidden sm:inline-block bg-amber-100 text-amber-800 text-[10px] font-semibold px-1.5 py-0.5 rounded border border-amber-300 shrink-0">
                   SIH26264
                 </span>
               </div>
-              <p className="text-[11px] text-slate-500 font-medium">
+              <p className="text-[10px] lg:text-[11px] text-slate-500 font-medium truncate">
                 EDUCATION · ACCESS · SERVICE • Statutory Bureau Surveillance & Conflict Interception
               </p>
             </div>
