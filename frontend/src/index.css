@@ -25,9 +25,23 @@
   background: #94a3b8;
 }
 
-/* Glass & Card styles */
 .aicte-card {
   @apply bg-white border border-slate-200/80 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200;
+}
+
+:root {
+  --syncdesk-navy: #0B2545;
+  --syncdesk-navy-light: #133E87;
+  --syncdesk-gold: #C19A5B;
+  --syncdesk-gold-light: #EBD9B4;
+}
+
+.syncdesk-gold-text {
+  color: #C19A5B;
+}
+
+.syncdesk-navy-bg {
+  background-color: #0B2545;
 }
 
 .tricolour-bar {

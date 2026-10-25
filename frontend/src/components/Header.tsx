@@ -61,22 +61,31 @@ export const Header: React.FC = () => {
       <div className="px-6 py-2.5 flex items-center justify-between">
         {/* Left Title branding */}
         <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 rounded bg-[#0f2942] flex items-center justify-center text-white font-bold text-sm shadow-sm border border-slate-700">
-            AICTE
-          </div>
-          <div>
-            <div className="flex items-center space-x-2">
-              <span className="font-bold text-slate-900 tracking-tight text-base">
-                AICTE Complaint Monitoring & Coordination Portal
-              </span>
-              <span className="bg-amber-100 text-amber-800 text-[10px] font-semibold px-2 py-0.5 rounded border border-amber-300">
-                SYNTHETIC DEMO
-              </span>
+          <Link to="/" className="flex items-center space-x-3 group">
+            <div className="w-10 h-10 rounded-lg bg-white p-0.5 flex items-center justify-center shadow-sm border border-slate-200 group-hover:border-amber-400 transition-colors">
+              <img
+                src="/syncdesk-icon.png"
+                alt="SyncDesk Shield"
+                className="w-full h-full object-contain"
+              />
             </div>
-            <p className="text-xs text-slate-500 font-medium">
-              Statutory Bureau Surveillance • Identity Resolution • Inter-Bureau Coordination
-            </p>
-          </div>
+            <div>
+              <div className="flex items-center space-x-2">
+                <span className="font-extrabold text-slate-900 tracking-tight text-base flex items-center">
+                  <span className="text-[#0B2545]">Sync</span>
+                  <span className="text-[#C19A5B]">Desk</span>
+                  <span className="mx-2 text-slate-300 font-normal">|</span>
+                  <span className="text-slate-800 font-bold">AICTE Complaint Monitoring & Coordination</span>
+                </span>
+                <span className="bg-amber-100 text-amber-800 text-[10px] font-semibold px-2 py-0.5 rounded border border-amber-300">
+                  SIH26264
+                </span>
+              </div>
+              <p className="text-[11px] text-slate-500 font-medium">
+                EDUCATION · ACCESS · SERVICE • Statutory Bureau Surveillance & Conflict Interception
+              </p>
+            </div>
+          </Link>
         </div>
 
         {/* Global Search */}

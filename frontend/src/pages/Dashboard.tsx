@@ -96,7 +96,7 @@ export const Dashboard: React.FC = () => {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-2 border-b border-slate-200 gap-2">
         <div>
           <h1 className="text-xl font-black text-slate-900 tracking-tight flex items-center">
-            Central Institutional Vigilance Overview
+            <span>SyncDesk Institutional Vigilance Overview</span>
             {isRefreshing && (
               <span className="ml-2.5 inline-flex items-center text-[10px] font-semibold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full border border-blue-200">
                 <RefreshCw className="w-3 h-3 animate-spin mr-1" /> Syncing live DB...

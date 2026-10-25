@@ -40,21 +40,31 @@ export const Login: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-slate-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
-      <div className="sm:mx-auto sm:w-full sm:max-w-md text-center">
+      <div className="sm:mx-auto sm:w-full sm:max-w-lg text-center px-4">
         {/* Tricolour Accent */}
         <div className="w-24 h-1 mx-auto mb-4 bg-gradient-to-r from-orange-500 via-white to-green-600 rounded"></div>
 
-        <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-[#0f2942] text-white shadow-lg border border-slate-700 mb-3">
-          <Shield className="w-8 h-8 text-blue-300" />
+        {/* SyncDesk Official Brand Banner */}
+        <div className="flex justify-center mb-4">
+          <div className="p-3 bg-white rounded-2xl shadow-md border border-slate-200/90 inline-flex items-center justify-center max-w-sm sm:max-w-md w-full">
+            <img
+              src="/syncdesk-logo.jpeg"
+              alt="SyncDesk Official Logo"
+              className="h-16 sm:h-20 w-auto object-contain mx-auto"
+            />
+          </div>
         </div>
+
         <h2 className="text-2xl font-black text-slate-900 tracking-tight">
-          AICTE Central Vigilance Portal
+          <span className="text-[#0B2545]">Sync</span><span className="text-[#C19A5B]">Desk</span> Vigilance Portal
         </h2>
-        <p className="mt-1 text-xs text-slate-600 font-medium">
-          Integrated Institution Complaint Monitoring & Coordination System
+        <p className="mt-1 text-xs text-slate-600 font-medium max-w-md mx-auto">
+          Integrated AICTE Complaint Monitoring, Overlap Intelligence & Inter-Bureau Coordination
         </p>
-        <div className="mt-2 inline-block px-3 py-1 bg-amber-50 border border-amber-200 rounded-full text-[11px] font-semibold text-amber-800">
-          Smart India Hackathon • SIH26264 Prototype
+        <div className="mt-2.5 inline-flex items-center space-x-1.5 px-3 py-1 bg-amber-50 border border-amber-200 rounded-full text-[11px] font-semibold text-amber-900">
+          <span>Smart India Hackathon</span>
+          <span className="text-amber-400">•</span>
+          <span>SIH26264 Prototype</span>
         </div>
       </div>
 
@@ -105,9 +115,9 @@ export const Login: React.FC = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full flex items-center justify-center space-x-2 py-2.5 px-4 rounded-md shadow bg-[#0f2942] hover:bg-blue-900 text-white font-bold text-xs tracking-wide transition-colors disabled:opacity-50"
+              className="w-full flex items-center justify-center space-x-2 py-2.5 px-4 rounded-md shadow bg-[#0B2545] hover:bg-[#133E87] text-white font-bold text-xs tracking-wide transition-colors disabled:opacity-50"
             >
-              <span>{loading ? "Authenticating..." : "Sign In to Surveillance Dashboard"}</span>
+              <span>{loading ? "Authenticating..." : "Sign In to SyncDesk Vigilance"}</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </form>

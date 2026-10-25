@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import {
   LayoutDashboard,
   FileText,
@@ -35,6 +35,28 @@ export const Sidebar: React.FC = () => {
 
   return (
     <aside className="w-64 bg-[#0a192f] text-slate-300 flex flex-col min-h-screen border-r border-slate-800 shrink-0">
+      {/* Official SyncDesk Brand Header */}
+      <div className="px-4 py-3 border-b border-slate-800 bg-[#0B2545]/95">
+        <Link to="/" className="flex items-center space-x-3 group">
+          <div className="w-10 h-10 rounded-lg bg-white p-1 flex items-center justify-center shrink-0 shadow-sm border border-slate-700/60 group-hover:border-amber-400 transition-colors">
+            <img
+              src="/syncdesk-icon.png"
+              alt="SyncDesk Shield"
+              className="w-full h-full object-contain"
+            />
+          </div>
+          <div className="min-w-0">
+            <div className="flex items-center">
+              <span className="text-base font-black tracking-tight text-white">Sync</span>
+              <span className="text-base font-black tracking-tight text-[#C19A5B]">Desk</span>
+            </div>
+            <div className="text-[9px] uppercase tracking-wider font-semibold text-slate-400 truncate">
+              AICTE Vigilance System
+            </div>
+          </div>
+        </Link>
+      </div>
+
       {/* Bureau Identifier Badge */}
       <div className="p-4 border-b border-slate-800">
         <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">
@@ -110,8 +132,9 @@ export const Sidebar: React.FC = () => {
 
       {/* Bottom Footer Info & Logout */}
       <div className="p-3 border-t border-slate-800/80 bg-slate-950/40">
-        <div className="text-[10px] text-slate-500 text-center mb-2">
-          AICTE Central Vigilance Engine v1.0
+        <div className="flex items-center justify-center space-x-1.5 text-[10px] text-slate-400 mb-2 font-medium">
+          <img src="/syncdesk-icon.png" alt="SyncDesk" className="w-3.5 h-3.5 object-contain rounded" />
+          <span>SyncDesk AICTE Surveillance v1.0</span>
         </div>
         <button
           onClick={logout}
