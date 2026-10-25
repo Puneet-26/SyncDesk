@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans antialiased min-h-screen selection:bg-blue-100 selection:text-blue-900;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+}
+
+/* Custom official government scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Glass & Card styles */
+.aicte-card {
+  @apply bg-white border border-slate-200/80 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200;
+}
+
+.tricolour-bar {
+  background: linear-gradient(90deg, #ea580c 0%, #ea580c 33%, #ffffff 33%, #ffffff 66%, #15803d 66%, #15803d 100%);
+  height: 3px;
+}

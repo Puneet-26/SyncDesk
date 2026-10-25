@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: aicte-complaint-backend
+    runtime: docker
+    dockerContext: ./backend
+    dockerfilePath: ./backend/Dockerfile
+    plan: free
+    region: oregon
+    healthCheckPath: /health
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: SECRET_KEY
+        generateValue: true
+      - key: AUTO_SEED
+        value: "true"
+      - key: BACKEND_CORS_ORIGINS
+        value: "http://localhost:5173"
