@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Depends
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session, joinedload
 from sqlalchemy import func, distinct
 from datetime import datetime, date, timedelta, timezone
 from typing import List, Dict, Any
@@ -31,8 +31,11 @@ def get_kpi_summary(db: Session = Depends(get_db), current_user: User = Depends(
         ComplaintCase.sla_due_date < today
     ).count()
 
-    # Institutions with active cross-bureau overlaps
-    active_overlap_assessments = db.query(OverlapAssessment).filter(
+    # Institutions with active cross-bureau overlaps (eager load cases to avoid N+1 WAN round trips)
+    active_overlap_assessments = db.query(OverlapAssessment).options(
+        joinedload(OverlapAssessment.case_a),
+        joinedload(OverlapAssessment.case_b)
+    ).filter(
         OverlapAssessment.status.in_(["Suggested", "Confirmed"])
     ).all()
 
